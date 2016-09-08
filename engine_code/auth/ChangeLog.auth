@@ -1,0 +1,122 @@
+#********************************************************************************
+#格式要求
+#       每行不要超过80个字符;
+#       每两次build之间用星号线("***")分割, 模板中的星号线刚好为80个字符;
+#       标点符号不要用半角, 用ASCII符号后跟一个空格;
+#       最新的记录在最上面;
+#       注意用tab开控制字体的颜色;
+#       每组记录与前后记录的间距为两行
+#       文件修改标记: 
+#               (M): 修改 modify
+#               (A): 增加 add
+#				(RA):增加 add directory 
+#               (D): 删除 delete
+#********************************************************************************
+2013-12-25 18:10:30 xiedongling <xiedongling@chanct.com>
+
+[case]
+	1.根据需求将authtool进程合并到logmon
+[Treatement]
+	* [A]engine_code/auth/logmon/include/authfile_info.h
+	* [A]engine_code/auth/logmon/include/decrypt.h
+	* [A]engine_code/auth/logmon/src/authfile_info.c
+	* [A]engine_code/auth/logmon/src/decrypt.c
+	* [A]engine_code/auth/logmon/src/compare_id.c
+	* [M]engine_code/auth/logmon/src/logmon_main.c
+
+2013-12-20 18:00:30 xiedongling <xiedongling@chanct.com>
+
+[case]
+	1.搭建授权控制代码架构
+	2.logmon看守进程状态
+[Treatement]
+	* [A]engine_code/auth/logmon/configure.in
+	* [A]engine_code/auth/logmon/Makefile.am
+	* [A]engine_code/auth/logmon/rebuild.sh
+	* [RA]engine_code/auth/logmon/src
+	* [RA]engine_code/auth/logmon/include
+	* [A]engine_code/auth/logmon/src/status.c
+	* [A]engine_code/auth/logmon/src/logmon_main.c
+	* [A]engine_code/auth/logmon/include/dump.h
+	* [A]engine_code/auth/logmon/include/logmon.h
+
+2013-11-26 18:20:40 xiedongling <xiedongling@chanct.com>
+
+[case]
+	1.获取签名信息
+	2.存储授权文件内容
+	3.比对序列号，并返回值
+[Treatement]
+	* [A]engine_code/auth/authtool/src/get_sig.c
+	* [A]engine_code/auth/authtool/src/authfile_info.c
+	* [A]engine_code/auth/authtool/src/compare_id.c
+	* [A]engine_code/auth/authtool/src/authtool_main.c
+	* [A]engine_code/auth/authtool/include/authfile_info.h
+
+2013-11-20 18:30:50 xiedongling <xiedongling@chanct.com>
+
+[case]
+	1.授权内容des加密解密
+	2.授权文件RSA签名和认证
+[Treatement]
+	* [A]engine_code/auth/authtool/src/des.c
+	* [A]engine_code/auth/authtool/src/rsa_verify.c
+
+2013-11-12 17:50:40 xiedongling <xiedongling@chanct.com>
+
+[cause]
+	1.搭建授权验证代码架构
+[Treatment]
+	* [A]engine_code/auth/authtool/configure.in
+	* [A]engine_code/auth/authtool/Makefile.am
+	* [A]engine_code/auth/authtool/rebuild.sh
+	* [RA]engine_code/auth/authtool/src
+	* [RA]engine_code/auth/authtool/include
+
+2013-11-07 18:35:30 xiedongling <xiedongling@chanct.com>
+
+[Cause]
+	1. 添加产品配置文件
+	2. 读取配置文件
+	3. 制作设备序列号并做md5加密
+[Treatment]
+	* [RA]engine_code/auth/conf
+	* [A]engine_code/auth/conf/product_id.conf
+	* [A]engine_code/auth/genkey/src/product_conf.c
+	* [A]engine_code/auth/genkey/src/md5.c
+	* [A]engine_code/auth/genkey/include/product_conf.h
+	* [A]engine_code/auth/genkey/include/md5.h
+	* [M]engine_code/auth/genkey/src/genkey_mian.c
+	* [M]engine_code//auth/genkey/Makefie.am
+
+2013-11-05 18:30:30 xiedongling <xiedongling@chanct.com>
+[Cause]
+	1. 获取设备主板号
+	2. 获取cpu序列号
+	3. 制作原始设备序列号
+[Treatment]
+	* [A]engine_code/auth/genkey/src/get_board_no.c
+	* [A]engine_code/auth/genkey/src/get_cpu.c
+	* [A]engine_code/auth/genkey/src/make_serial.c
+	* [A]engine_code/auth/genkey/src/genkey_main.c
+	* [A]engine_code/auth/genkey/include/genkey.h
+	* [M]engine_code//auth/genkey/Makefie.am
+
+
+
+
+
+
+2013-11-1 17:00:40 xiedongling <xiedongling@chanct.com>
+[Cause]
+	搭建获取设备序列号代码架构
+	创建ChangeLog.auth 文件
+[Treatment]
+
+	* [A]engine_code/auth/genkey/configure.in
+	* [A]engine_code/auth/genkey/Makefile.am
+	* [A]engine_code/auth/genkey/rebuild.sh
+	* [RA]engine_code/auth/genkey/src
+	* [RA]engine_code/auth/genkey/include
+	* [A]engine_code/auth/ChangeLog.auth
+

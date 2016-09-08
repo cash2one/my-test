@@ -1,0 +1,6 @@
+{
+	"gmsconfig"        : "/gms/conf/gmsconfig.xml",
+	"def_flow_path"    : "/gms/storage/flow_def",
+	"apt_flow_path"    : "/gms/conf/custom_flow.conf"
+
+}

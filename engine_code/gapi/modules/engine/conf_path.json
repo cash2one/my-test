@@ -1,0 +1,11 @@
+{
+	"gmsconfigxml" : "/gms/conf/gmsconfig.xml",
+	"innerip" : "/gms/apt/user_config/inter_server.conf",
+    "iplist":"/gms/storage/conf/iplist.conf",
+	"mailserver" : "/gms/apt/user_config/mail_server.conf",
+	"webserver" : "/gms/apt/user_config/web_server.conf",
+	"regfile_path" : "/gms/conf/reg.dat",
+	"mtx_white_path" : "/gms/mtx/conf/wtl.conf",
+	"logpath" : "/data/log/engine/",
+    "iplist" : "/gms/storage/conf/iplist.conf"
+}

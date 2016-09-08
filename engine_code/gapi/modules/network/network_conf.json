@@ -1,0 +1,26 @@
+{
+	"comm_interface_conf" : "/gms/conf/comm_interface_conf.xml",
+	"gmsconfig" : "/gms/conf/gmsconfig.xml",
+	"machine_type"  : "/cfcard/chanct_conf/machine_type.conf",
+	"topo_path"     : "/data/tmpdata/comm/topo/self",
+	"rsa_file+path" : "/gms/auth/conf/rsa.1024.pub",
+	"rsa_tmppath"   : "/gms/auth/conf/tmp_rsa",
+	"des_tmppath"   : "/gms/auth/conf/tmp_des",
+	"mtx_path"      : "/gms/mtx/" ,
+	"apt_path"      : "/gms/apt/online" ,
+	"offline_path"  : "/gms/apt/offline" ,
+	"vds_path"      : "/vds/script/monitor.sh" ,
+	"store_path"    : "/gms/storage/store_proc" ,
+	"flow_path"     : "/gms/storage/flow_proc" ,
+	"merge_path"    : "/gms/storage/merge_proc" ,
+	"sys_guard"     : "/gms/guard/sys_guard" ,
+	"comm_main"     : "/gms/comm/comm_main.py" ,
+	"comm_cloud"    : "/gms/gapi/init/cloud_start.py" ,
+	"remote_trans"  : "/gms/comm/remote/remote_trans.py" ,
+	"nmsmw_path"    : "/nmsmw/daemon/mtx_export/event_export.py" ,
+	"url_detect"    : "/gms/url_detect/url_detect.py" ,
+	"auth_log_path" : "/data/log/auth/",
+	"ifcfg_path"    : "/etc/sysconfig/network-scripts/",
+	"ip"            : "192.0.10.251"  
+
+}

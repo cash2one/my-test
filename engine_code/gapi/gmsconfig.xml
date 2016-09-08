@@ -1,0 +1,91 @@
+<gmsconf>
+    <gms_network>
+        <net gateway="192.168.0.1" ip="192.168.0.171" netmask="255.255.255.0"> </net>
+        <dns dns1="202.106.0.20" dns2="8.8.8.8" proxy="0"> </dns>
+    </gms_network>
+    <gms_device>
+        <attr cloudcon="0" down_port="10108" ip="192.168.0.171" manager="0" monitor="0" name="" root="0" up_port="10107" uuid="" />
+        <port> </port>
+    </gms_device>
+    <gms_detect>
+    </gms_detect>
+    <gms_proxy>
+        <pro flag="HTTP" />
+        <http ip="" passwd="" port="" username="" />
+        <sock4 />
+        <sock5 />
+    </gms_proxy>
+    <gms_limit downlimit="0" uplimit="0" />
+    <gms_engine>
+        <apt status="1">
+        </apt>
+        <mtx status="1" />
+        <vds apc="1" dd="1" dm="1" />
+    </gms_engine>
+	<flow_engine> 
+		<flow_engine_name>tcad</flow_engine_name>
+	</flow_engine>
+    <gms_debug> 
+        <ssh enable="1" />
+    </gms_debug>
+    <gms_warn>
+		<syslog enable="0" />
+    </gms_warn>
+	<gms_auth>
+		<auth_file name=""> </auth_file>
+		<auth_time apt="0" mtx="0" vds="0"> </auth_time>
+		<sur_time day="0" speed="0"> </sur_time>
+	</gms_auth>
+	<gms_id>
+		<dev_id Id="HWCQ-GR2AV-V67"> </dev_id>
+	</gms_id>
+	<gms_time>
+	<manual_time num="28" timezone="cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime"> </manual_time>
+	<auto_time port="123" server="219.158.14.130" switch="0"/>
+	</gms_time>
+	<gms_def_flow>
+	</gms_def_flow>
+	<gms_flow_time>
+		<flow_time delay="60"> </flow_time>
+		<incr_time delay="1800"> </incr_time>
+	</gms_flow_time>
+	<gms_flow_restore>
+	</gms_flow_restore>
+	<gms_xge_monitor>
+		<if_is_monitor ret="0" />
+		<if_is_xge_device>0</if_is_xge_device>
+		<comm_sh_port>10109</comm_sh_port>
+	</gms_xge_monitor>
+	<neighbour>
+		<device down_port="10108" ip="192.0.10.252" name="监测2" type="万兆" eth_num="1" status="1" up_port="10107" dev_id="6H9Y-B42G-HHKJ"> </device>
+		<device down_port="10108" ip="192.0.10.253" name="监测3" type="万兆" eth_num="1" status="1" up_port="10107" dev_id="BQ4T-5WMA-774R"> </device>
+		<device down_port="10108" ip="192.0.10.254" name="监测4" type="万兆" eth_num="1" status="1" up_port="10107" dev_id="FC6W-XHMF-YY4B"> </device>
+	</neighbour>
+	<gms_wtl>
+	</gms_wtl>
+
+    <email head="GMS" switch="1">
+        <send_index>
+            <mail>chanct_wangan@163.com</mail>
+            <pw>chanct-gms123</pw>
+            <mail_server>smtp.163.com</mail_server>
+            <port>25</port>
+        </send_index>
+        <send_other>
+            <mail></mail>
+            <pw></pw>
+            <mail_server></mail_server>
+            <port></port>
+        </send_other>
+        <container>
+        </container>
+    </email>
+    <security num="5" set="0"></security>
+    <threshold mode="10" oday="100" pro="10" psize="" war="20" />
+	<ddos_set>                                                                                                            
+        <ddos_switch open="1" self_learn="0" />                                                                          
+        <in_threshold flow="100" tcp_live_conn="1000" tcp_new_conn="100000" />                                           
+        <out_threshold flow="100" tcp_live_conn="1000" tcp_new_conn="100000" />                                          
+    </ddos_set> 
+	<comm_stat link="1" />
+</gmsconf>

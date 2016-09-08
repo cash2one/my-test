@@ -1,0 +1,59 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+DEFRAG_CONF	dfp_ip_decode.c	/^static struct DEFRAG_CONF {$/;"	s	file:
+DEFRAG_CONF::ip_frag_overlapped_str	dfp_ip_decode.c	/^	char ip_frag_overlapped_str[10];$/;"	m	struct:DEFRAG_CONF	file:	access:public
+DEFRAG_CONF::max_defrag_num	dfp_ip_decode.c	/^	unsigned int max_defrag_num;$/;"	m	struct:DEFRAG_CONF	file:	access:public
+DIR_ANSWER	dfp_udp_decode.c	25;"	d	file:
+DIR_REQUEST	dfp_udp_decode.c	24;"	d	file:
+DUAL_STREAM	dfp_tcp_decode.c	50;"	d	file:
+END_CLIENT	dfp_udp_decode.c	26;"	d	file:
+END_SERVER	dfp_udp_decode.c	27;"	d	file:
+IP_chksum	dfp_ip_decode.c	/^static inline u_int16_t IP_chksum(unsigned short *w, int bytelen)$/;"	f	file:	signature:(unsigned short *w, int bytelen)
+IP_chksum_fast	dfp_ip_decode.c	/^static inline unsigned short IP_chksum_fast(unsigned char *iph,$/;"	f	file:	signature:(unsigned char *iph, unsigned int ihl)
+MAX_REASM_PORT_NAME_LEN	dfp_tcp_decode.c	212;"	d	file:
+MAX_REASM_PORT_NAME_NUM	dfp_tcp_decode.c	211;"	d	file:
+PREPROC_TDP_PAYLOAD_LEN	dfp_tcp_decode.c	154;"	d	file:
+SINGLE_STREAM_0	dfp_tcp_decode.c	48;"	d	file:
+SINGLE_STREAM_1	dfp_tcp_decode.c	49;"	d	file:
+_SPECIAL_DRV_	dfp_special_ether_decode.c	5;"	d	file:
+alloc_preproc_mem	dfp_tcp_decode.c	/^static int alloc_preproc_mem(bthread_private_info_t *tmp_private)$/;"	f	file:	signature:(bthread_private_info_t *tmp_private)
+clean_preproc_mem	dfp_tcp_decode.c	/^static void clean_preproc_mem(bthread_private_info_t *tmp_private)$/;"	f	file:	signature:(bthread_private_info_t *tmp_private)
+defrag_cdt	dfp_ip_decode.c	/^static cfg_desc defrag_cdt[] = {$/;"	v	file:
+defrag_conf	dfp_ip_decode.c	/^} defrag_conf;$/;"	v	typeref:struct:DEFRAG_CONF	file:
+do_MPLS_decode	dfp_ether_decode.c	/^static inline void do_MPLS_decode(pkt_info_t *ppkt)$/;"	f	file:	signature:(pkt_info_t *ppkt)
+ether_decode_clean	dfp_ether_decode.c	/^void ether_decode_clean(void *private_info)$/;"	f	signature:(void *private_info)
+ether_decode_init	dfp_ether_decode.c	/^int ether_decode_init(void *private_info, char *args)$/;"	f	signature:(void *private_info, char *args)
+in_chksum_tcp	dfp_tcp_decode.c	/^static inline unsigned short in_chksum_tcp(  unsigned short *h, unsigned short * d, int dlen )$/;"	f	file:	signature:( unsigned short *h, unsigned short * d, int dlen )
+ip_decode	dfp_ip_decode.c	/^u_int8_t ip_decode(void *private_info, u_int8_t * raw_packet, Packet_t * packet)$/;"	f	signature:(void *private_info, u_int8_t * raw_packet, Packet_t * packet)
+ip_decode_clean	dfp_ip_decode.c	/^void ip_decode_clean(void *private_info)$/;"	f	signature:(void *private_info)
+ip_decode_init	dfp_ip_decode.c	/^int ip_decode_init(void *private_info ,char *args)$/;"	f	signature:(void *private_info ,char *args)
+ip_frag_overlapped_str	dfp_ip_decode.c	/^	char ip_frag_overlapped_str[10];$/;"	m	struct:DEFRAG_CONF	file:	access:public
+max_defrag_num	dfp_ip_decode.c	/^	unsigned int max_defrag_num;$/;"	m	struct:DEFRAG_CONF	file:	access:public
+plugin_clean	dfp_ether_decode.c	/^int plugin_clean(pkt_info_t *ppkt)$/;"	f	signature:(pkt_info_t *ppkt)
+plugin_clean	dfp_special_ether_decode.c	/^int plugin_clean(pkt_info_t *ppkt)$/;"	f	signature:(pkt_info_t *ppkt)
+plugin_init	dfp_ether_decode.c	/^void *plugin_init(int ptheadnum)$/;"	f	signature:(int ptheadnum)
+plugin_init	dfp_special_ether_decode.c	/^void *plugin_init(int ptheadnum)$/;"	f	signature:(int ptheadnum)
+plugin_proc	dfp_ether_decode.c	/^int plugin_proc(pkt_info_t *ppkt)$/;"	f	signature:(pkt_info_t *ppkt)
+plugin_proc	dfp_special_ether_decode.c	/^int plugin_proc(pkt_info_t *ppkt)$/;"	f	signature:(pkt_info_t *ppkt)
+plugin_tcp_clean	dfp_ether_decode.c	/^int plugin_tcp_clean(pkt_info_t *ppkt)$/;"	f	signature:(pkt_info_t *ppkt)
+plugin_tcp_clean	dfp_special_ether_decode.c	/^int plugin_tcp_clean(pkt_info_t *ppkt)$/;"	f	signature:(pkt_info_t *ppkt)
+print_decodecontent	dfp_tcp_decode.c	/^void print_decodecontent(char *payload, u_int32_t len)$/;"	f	signature:(char *payload, u_int32_t len)
+reasm_cdt	dfp_tcp_decode.c	/^static cfg_desc reasm_cdt[] = {$/;"	v	file:
+reasm_conf	dfp_tcp_decode.c	/^struct REASM_CONF reasm_conf;$/;"	v	typeref:struct:REASM_CONF
+set_direction	dfp_tcp_decode.c	/^static inline void set_direction(Packet_t *packet, u_int16_t *hi_proto_id_pair)$/;"	f	file:	signature:(Packet_t *packet, u_int16_t *hi_proto_id_pair)
+special_eth_hdr	dfp_special_ether_decode.c	/^unsigned char special_eth_hdr[14] = {0};$/;"	v
+special_ether_decode	dfp_special_ether_decode.c	/^special_ether_decode(void *private_info, u_int8_t *raw_packet, Packet_t *packet)$/;"	f	signature:(void *private_info, u_int8_t *raw_packet, Packet_t *packet)
+special_ether_decode_init	dfp_special_ether_decode.c	/^int special_ether_decode_init(void *private_info, char *args)$/;"	f	signature:(void *private_info, char *args)
+tcp_decode	dfp_tcp_decode.c	/^u_int8_t tcp_decode(void *private_info, u_int8_t *raw_packet, Packet_t *packet)$/;"	f	signature:(void *private_info, u_int8_t *raw_packet, Packet_t *packet)
+tcp_decode_clean	dfp_tcp_decode.c	/^void tcp_decode_clean(void *private_info)$/;"	f	signature:(void *private_info)
+tcp_decode_init	dfp_tcp_decode.c	/^int tcp_decode_init(void *private_info, char *args)$/;"	f	signature:(void *private_info, char *args)
+tcp_header	dfp_tcp_decode.c	/^static inline int tcp_header(Packet_t *packet)$/;"	f	file:	signature:(Packet_t *packet)
+udp_decode	dfp_udp_decode.c	/^u_int8_t udp_decode(void *private_info, u_int8_t *raw_packet, Packet_t *packet)$/;"	f	signature:(void *private_info, u_int8_t *raw_packet, Packet_t *packet)
+udp_decode_clean	dfp_udp_decode.c	/^void udp_decode_clean(void *private_info)$/;"	f	signature:(void *private_info)
+udp_decode_init	dfp_udp_decode.c	/^int udp_decode_init(void *private_info, char *args)$/;"	f	signature:(void *private_info, char *args)
+unkind_port_tcp	dfp_tcp_decode.c	/^static inline int unkind_port_tcp(int port)$/;"	f	file:	signature:(int port)
+unkind_port_udp	dfp_udp_decode.c	/^static inline int unkind_port_udp(int port)$/;"	f	file:	signature:(int port)

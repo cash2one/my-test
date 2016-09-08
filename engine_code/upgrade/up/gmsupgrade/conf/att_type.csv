@@ -1,0 +1,11 @@
+1,tcp_flood
+2,tcp_syn_flood
+3,tcp_ack_flood
+4,icmp_flood
+5,chargen_flood
+6,ssdp_flood
+7,ntp_flood
+8,dns_flood
+9,tcp_link
+10,snmp_flood
+11,blended_attack

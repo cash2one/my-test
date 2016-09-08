@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gms>
+	<database>
+		<driverclass>org.postgresql.Driver</driverclass>
+		<url>jdbc:postgresql://localhost:5432/gms_db</url>
+		<user>gms_user</user>
+		<password>123456</password>
+	</database>
+	<path>
+		<!-- 路径分割路用'/',以'/'结束 -->
+		<packdirectory>/gms/updata/pack/</packdirectory>
+		<unpackdirectory>/gms/updata/unpack/</unpackdirectory>
+		<backdirectory>/gms/updata/back/</backdirectory>
+		<sysversionfile>/gms/conf/version.xml</sysversionfile>
+	</path>
+	<comm>
+		<port>10000</port>
+	</comm>
+</gms>

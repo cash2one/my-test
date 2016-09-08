@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Mon Dec 09 14:41:37 CST 2013
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=Upgrade.jar
+manifest.mergeall=true
+manifest.mainclass=com.chanct.gms.GmsUpgrade
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=

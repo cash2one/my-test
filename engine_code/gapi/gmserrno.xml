@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmserrno>
+    <errno value="-1" info="系统错误"/>
+    <errno value="0" info="正确"/>
+    <errno value="1" info="参数错误"/>
+    <errno value="2" info="未知的函数名"/>
+    <errno value="3" info="已经被其它会话抢占"/>
+    <errno value="4" info="配置文件异常"/>
+    <errno value="5" info="手动配置时间失败"/>
+    <errno value="6" info="配置文件没有找到"/>
+    <errno value="7" info="时间配置成功"/>
+    <errno value="8" info="同步时间失败"/>
+    <errno value="9" info="未授权"/>
+    <errno value="10" info="ip配置失败"/>
+    <errno value="11" info="dns1配置失败"/>
+    <errno value="12" info="dns2配置失败"/>
+    <errno value="13" info="缺少json配置文件"/>
+    <errno value="14" info="授权失败"/>
+    <errno value="15" info="授权到期"/>
+    <errno value="16" info="授权成功"/>
+    <errno value="17" info="引擎组建删除失败"/>
+    <errno value="18" info="无效ip"/>
+    <errno value="19" info="无效子网掩码"/>
+    <errno value="20" info="无效网关"/>
+    <errno value="21" info="无效端口号"/>
+    <errno value="22" info="代理服务器不可达"/>
+	<errno value="23" info="知识库入库失败"/>
+    <errno value="116" info="未知错误"/>
+    <errno value="117" info="没有可执行权限"/>
+    <errno value="118" info="会话已经被锁住"/>
+	<errno value="120" info="参数不正确"/>
+	<errno value="121" info="email配置问题！"/>
+	<errno value="201" info="发件箱配置不成功！"/>
+</gmserrno>
+
+

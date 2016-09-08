@@ -1,0 +1,130 @@
+#********************************************************************************
+#格式要求
+#       每行不要超过80个字符;
+#       每两次build之间用星号线("***")分割, 模板中的星号线刚好为80个字符;
+#       标点符号不要用半角, 用ASCII符号后跟一个空格;
+#       最新的记录在最上面;
+#       注意用tab开控制字体的颜色;
+#       每组记录与前后记录的间距为两行
+#       文件修改标记: 
+#               (M): 修改 modify
+#               (A): 增加 add
+#				(RA):增加 add directory 
+#               (D): 删除 delete
+#********************************************************************************
+
+2013-12-16 16:03:23 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 添加一些redis 链表插入接口
+	2. 修正一些共有的宏
+	3. 添加一些时间的操作接口
+
+[Treatment]
+	* [M]engine_code/database_lib/src/postgres/include/store_common.h
+	* [M]engine_code/database_lib/src/postgres/include/gms_tables.h
+	* [M]engine_code/database_lib/src/postgres/src/store_common.c
+	* [M]engine_code/database_lib/src/redis/src/redis_op.c
+	* [M]engine_code/database_lib/src/redis/src/redis_list.c
+	* [M]engine_code/database_lib/src/redis/include/gms_redis.h
+	* [M]engine_code/database_lib/src/redis/include/gms_keys.h
+
+2013-11-30 14:30:00 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 添加redis设置KEY生命周期接口
+	2. 添加reids 排序队列接口
+	3. 添加存储基础函数接口
+
+[Treatment]
+	* [M]engine_code/database_lib/src/postgres/include/store_common.h
+	* [M]engine_code/database_lib/src/postgres/include/gms_tables.h
+	* [M]engine_code/database_lib/src/postgres/src/store_common.c
+	* [M]engine_code/database_lib/src/redis/src/redis_op.c
+	* [M]engine_code/database_lib/src/redis/src/redis_zset.c
+	* [M]engine_code/database_lib/src/redis/include/gms_redis.h
+	* [A]engine_code/database_lib/src/redis/include/gms_keys.h
+
+2013-11-19 18:40:00 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 修正存储基础接口
+	2. 修正reids数据库接口
+	3. 添加redis链表操作接口
+	4. 添加reiis表定义结构
+
+[Treatment]
+	* [M]engine_code/database_lib/src/postgres/include/store_common.h
+	* [M]engine_code/database_lib/src/postgres/src/store_common.c
+	* [M]engine_code/database_lib/src/postgres/src/psql_conn.c
+	* [M]engine_code/database_lib/src/redis/src/redis_op.c
+	* [M]engine_code/database_lib/src/redis/src/redis_hash.c
+	* [M]engine_code/database_lib/src/redis/src/redis_list.c
+	* [M]engine_code/database_lib/src/redis/include/gms_redis.h
+	* [A]engine_code/database_lib/src/redis/include/gms_keys.h
+	* [M]engine_code/database_lib/src/redis/Makefile.am
+	* [M]engine_code/database_lib/bulid.sh
+
+2013-11-15 13:40:00 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 添加修正psql COPY命令 
+	2. 更新psql例子
+	3. 创建psql数据库表文件声明 
+[Treatment]
+	* [A]engine_code/database_lib/src/postgres/include/gms_tables.h
+	* [A]engine_code/database_lib/src/postgres/include/gms_psql.h
+	* [A]engine_code/database_lib/src/postgres/src/store_common.c
+	* [A]engine_code/database_lib/src/postgres/src/psql_conn.c
+	* [M]engine_code/database_lib/src/redis/Makefile.am
+	* [M]engine_code/database_lib/build.sh
+
+2013-11-06 17:19:00 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 添加redis zset 插入自增接口
+[Treatment]
+	* [A]engine_code/database_lib/src/redis/src/redis_zset.c
+	* [M]engine_code/database_lib/src/redis/src/redis_hash.c
+	* [M]engine_code/database_lib/src/redis/Makefile.am
+	* [M]engine_code/database_lib/include/gms_redis.h
+
+2013-11-04 17:27:00 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 添加redis 封装C基本操作接口
+[Treatment]
+	* [RA]engine_code/database_lib/src/redis
+	* [RA]engine_code/database_lib/src/redis/include
+	* [RA]engine_code/database_lib/src/redis/lib
+	* [A]engine_code/database_lib/src/redis/include/gms_redis.h
+	* [A]engine_code/database_lib/src/redis/include/hiredis.h
+	* [A]engine_code/database_lib/src/redis/configure.in
+	* [A]engine_code/database_lib/src/redis/vbuilt.sh
+	* [A]engine_code/database_lib/src/redis/src/redis_conn.c
+	* [A]engine_code/database_lib/src/redis/src/redis_op.c
+	* [A]engine_code/database_lib/src/redis/src/redis_hash.c
+
+2013-10-31 18:07:30 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 搭建database_lib代码架构
+	2. 添加postgreSQL 封装C基本操作接口
+[Treatment]
+	* [A]engine_code/database_lib/build.sh
+	* [RA]engine_code/database_lib/include
+	* [RA]engine_code/database_lib/lib
+	* [RA]engine_code/database_lib/src
+	* [RA]engine_code/database_lib/so
+	* [RA]engine_code/database_lib/src/postgres
+	* [A]engine_code/database_lib/src/postgres/configure.in
+	* [A]engine_code/database_lib/src/postgres/Makefile.am
+	* [A]engine_code/database_lib/src/postgres/rebuild.sh
+	* [A]engine_code/database_lib/src/postgres/vbuild.sh
+	* [RA]engine_code/database_lib/src/postgres/include
+	* [RA]engine_code/database_lib/src/postgres/src
+	* [A]engine_code/database_lib/src/postgres/include/gms_psql.h
+	* [A]engine_code/database_lib/src/postgres/include/store_common.h
+	* [A]engine_code/database_lib/src/postgres/src/psql_conn.c
+	* [A]engine_code/database_lib/src/postgres/src/psql_result.c
+
+
+2013-10-24 08:42:30 liudanbing <liudanbing@chanct.com>
+[Cause]
+	创建ChangeLog.db文件
+[Treatment]
+	* [A]engine_code/storage/ChangeLog.db
+

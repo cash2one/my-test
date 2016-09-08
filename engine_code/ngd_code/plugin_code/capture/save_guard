@@ -1,0 +1,39 @@
+Binary file build/libcaptor.so matches
+Binary file build/libcaptor_so-cap_record.o matches
+src/cap_record.c:	if (rdp->save_guard == 0) 
+src/cap_record.c:	rdp->file_head.item_num++;
+src/cap_record.c:	rdp->file_head.file_len += sizeof(item_head) + raw_pkt_len;
+src/cap_record.c:	rdp->file_head.flag += rdp->file_head.file_len - 16; /* ? */
+src/cap_record.c://	item_head.time_offset = time(NULL) - rdp->file_head.file_time;
+src/cap_record.c:	item_head.time_offset = (get_time() - (rdp->file_head).file_time) * 1000000;
+src/cap_record.c:	lseek(rdp->fd, 0, SEEK_SET);
+src/cap_record.c:	write(rdp->fd, &rdp->file_head, sizeof(rdp->file_head));
+src/cap_record.c:	lseek(rdp->fd, 0, SEEK_END);
+src/cap_record.c:	write(rdp->fd, &item_head, sizeof(item_head));
+src/cap_record.c:	//	write(rdp->fd, special_mac, 14);
+src/cap_record.c:	//	write(rdp->fd, raw_pkt+14, raw_pkt_len - 14);
+src/cap_record.c:		write(rdp->fd, raw_pkt, raw_pkt_len);
+src/cap_record.c:	return rdp->save_guard--;
+src/cap_record.c:			rdp->fd = open(capfile, O_CREAT|O_RDWR, S_IRUSR|S_IWUSR);
+src/cap_record.c:			if (rdp->fd < 0) {
+src/cap_record.c:			rdp->fd = open(OUT_CAP_FILE, O_CREAT|O_RDWR, S_IRUSR|S_IWUSR);
+src/cap_record.c:			if (rdp->fd < 0) {
+src/cap_record.c:		init_sniff_file_head(&(rdp->file_head));
+src/cap_record.c:			rdp->save_guard = num;
+src/cap_record.c:			rdp->save_guard = DEFAULT_RECORD_NUM;
+src/cap_record.c:			rdp->fd = open(capfile, O_RDONLY);
+src/cap_record.c:			if (rdp->fd < 0) {
+src/cap_record.c:			rdp->fd = open(OUT_CAP_FILE, O_RDONLY);
+src/cap_record.c:			if (rdp->fd < 0) {
+src/cap_record.c:		if (read(rdp->fd, &rdp->file_head, len) != len) {
+src/cap_record.c:		DMSG("-------%d----\n", rdp->file_head.item_num);
+src/cap_record.c:		if (memcmp(&rdp->file_head, SNIFF_FILE_TITLE, 3) != 0) {
+src/cap_record.c:			rdp->save_guard = num;
+src/cap_record.c:			rdp->save_guard = rdp->file_head.item_num;
+src/cap_record.c:	close(rdp->fd);
+src/cap_record.c:	DMSG("============rdp->save_guard:%d=========\n", rdp->save_guard);
+src/cap_record.c:	if (rdp->save_guard-- <= 0) {
+src/cap_record.c:		if (read(rdp->fd, &item_head, len) != len) {
+src/cap_record.c:			if (rdp->save_guard != 0 && try++ < 3) {
+src/cap_record.c:				lseek(rdp->fd, sizeof(struct sniff_file_head), SEEK_SET);
+src/cap_record.c:		if (read(rdp->fd, buf, len) != len) {

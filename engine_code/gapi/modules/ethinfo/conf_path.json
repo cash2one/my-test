@@ -1,0 +1,12 @@
+{
+    "logpath" : "/data/log/ethinfo/",
+    "gmsconfigxml" : "/gms/conf/gmsconfig.xml",
+    "aptpagconf" : "/gms/tcad/pag.conf",
+    "mtxpagconf" : "/gms/mtx/pag.conf",
+    "vdspagconf" : "/vds/pag.conf",
+    "regpath":"/gms/conf/",
+    "regname":"reg.dat",
+    "mtxwhitepath":"/gms/mtx/conf/",
+	"mtxwhite":"wtl.conf",
+    "eth_record":"/cfcard/ethrecord.conf"
+}

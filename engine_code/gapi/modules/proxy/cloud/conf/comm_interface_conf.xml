@@ -1,0 +1,14 @@
+<cominfo>
+    <selfinfo>
+	<devtype>
+	    <manager>0</manager>
+	    <monitor>1</monitor>
+	    <cloudcon>0</cloudcon>
+	    <root>0</root>
+	</devtype>
+	<ip>0.0.0.0</ip>
+        <uuid>018c2998-9bd0-11e3-bab6-00e04c0b9000</uuid>
+        <comm_cmd_port>10108</comm_cmd_port>
+        <comm_file_port>10107</comm_file_port>
+    </selfinfo>
+</cominfo>

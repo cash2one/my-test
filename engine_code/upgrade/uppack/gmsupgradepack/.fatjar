@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Wed Dec 04 13:27:47 CST 2013
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=GmsPack.jar
+manifest.mergeall=true
+manifest.mainclass=com.chanct.gms.GmsPack
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=

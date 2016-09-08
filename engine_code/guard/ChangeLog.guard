@@ -1,0 +1,65 @@
+#********************************************************************************
+#¿¿¿¿
+#       ¿¿¿¿¿¿80¿¿¿¿
+#       ¿¿¿build¿¿¿¿¿¿("***")¿¿¿¿¿¿¿¿¿¿¿80¿¿
+#       ¿¿¿¿¿¿¿¿¿, ¿ASCII¿¿¿¿¿¿¿¿;
+#       ¿¿¿¿¿¿¿¿¿;
+#       ¿¿¿tab¿¿¿¿¿¿¿¿;
+#       ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿
+#       ¿¿¿¿¿¿:
+#               (M): ¿¿ modify
+#               (A): ¿¿ add
+#				(RA):¿¿ add directory 
+#               (D): ¿¿ delete
+#********************************************************************************
+2014-02-14 09:50:30 xiedongling <xiedongling@chanct.com>
+
+[case]
+	1.¿¿¿¿¿¿¿¿
+	2.¿¿¿¿¿¿¿¿¿¿
+[Treatement]
+	* [M]engine_code/guard/sys_guard/src/sysstatus.c
+	* [A]engine_code/guard/sys_guard/conf/tmp.status
+	* [A]engine_code/guard/sys_guard/conf/cronjob.conf
+
+2014-01-24 18:10:30 xiedongling <xiedongling@chanct.com>
+
+[case]
+	1.¿¿¿¿¿¿¿¿
+[Treatement]
+
+	* [A]engine_code/guard/sys_guard/src/sysstatus_file.c
+	* [M]engine_code/guard/sys_guard/src/sys_guard_main.c
+	* [A]engine_code/guard/sys_guard/include/sysstatus_file.h
+
+2014-01-15 18:00:30 xiedongling <xiedongling@chanct.com>
+
+[case]
+	1.¿¿¿¿¿¿¿¿
+	2.¿¿¿¿¿¿
+[Treatement]
+	* [A]engine_code/guard/sys_guard/src/GenStat.sh
+	* [A]engine_code/guard/sys_guard/src/drop_cache.sh
+	* [A]engine_code/guard/sys_guard/src/read.c
+	* [A]engine_code/guard/sys_guard/src/guard.c
+	* [A]engine_code/guard/sys_guard/src/service_class.c
+	* [A]engine_code/guard/sys_guard/include/report_stat.h
+	* [A]engine_code/guard/sys_guard/include/priority.h
+	* [M]engine_code/guard/sys_guard/src/sys_guard_main.c
+
+2014-01-05 18:20:40 xiedongling <xiedongling@chanct.com>
+
+[case]
+	1.¿¿¿¿¿¿¿¿¿¿
+[Treatement]
+	* [RA]engine_code/guard/sys_guard
+	* [RA]engine_code/guard/sys_guard/include
+	* [RA]engine_code/guard/sys_guard/src
+	* [A]engine_code/guard/sys_guard/src/sys_guard_main.c
+	* [R]engine_code/guard/sys_guard/configure.in
+	* [R]engine_code/guard/sys_guard/Makefile.am
+	* [R]engine_code/guard/sys_guard/rebuild.sh
+	* [RA]engine_code/guard/conf
+	* [A]engine_code/guard/ChangeLog.guard
+
+

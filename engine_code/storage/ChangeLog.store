@@ -1,0 +1,249 @@
+#********************************************************************************
+#格式要求
+#       每行不要超过80个字符;
+#       每两次build之间用星号线("***")分割, 模板中的星号线刚好为80个字符;
+#       标点符号不要用半角, 用ASCII符号后跟一个空格;
+#       最新的记录在最上面;
+#       注意用tab开控制字体的颜色;
+#       每组记录与前后记录的间距为两行
+#       文件修改标记: 
+#               (M): 修改 modify
+#               (A): 增加 add
+#				(RA):增加 add directory 
+#               (D): 删除 delete
+#********************************************************************************
+
+2013-12-17 11:12:12 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 修正流量合并不能每小时逐步合并错误
+	2. 更改PostgreSQL t_event_flowminu表 flow_time 字段为ftime
+[Treatment]
+	* [M]engine_code/storage/flow_proc/conf/flow_time.cfg
+	* [M]engine_code/storage/flow_proc/src/flow_cfg.c
+	* [M]engine_code/storage/store_proc/conf/storage.cfg
+	* [M]engine_code/storage/merge_proc/src/merge_flow.c
+	* [M]engine_code/storage/merge_proc/src/merge_attack.c
+	* [M]engine_code/storage/merge_proc/conf/merge_time.cfg
+
+2013-12-16 15:53:12 liudanbing <liudanbing@chanct.com>
+[Cause]
+	增加流量统计 和 流量入库功能
+[Treatment]
+	* [A]engine_code/storage/flow_proc/src/flow_statistics.c
+	* [M]engine_code/storage/flow_proc/include/flow_config.h
+	* [M]engine_code/storage/flow_proc/include/flow_debug.h
+	* [M]engine_code/storage/flow_proc/include/gms_flow.h
+	* [M]engine_code/storage/flow_proc/src/flow_store.c
+	* [M]engine_code/storage/flow_proc/src/flow_cfg.c
+	* [M]engine_code/storage/flow_proc/src/flow_main.c
+	* [D]engine_code/storage/flow_proc/src/flow_make.c
+	* [M]engine_code/storage/store_proc/include/store_file_op.h
+	* [M]engine_code/storage/store_proc/include/dirwalk.h
+	* [M]engine_code/storage/store_proc/include/gms_store.h
+	* [M]engine_code/storage/store_proc/conf/storage.cfg
+	* [M]engine_code/storage/store_proc/src/store_attack.c
+	* [M]engine_code/storage/store_proc/src/store_3rd.c
+	* [M]engine_code/storage/store_proc/src/store_file_op.c
+
+2013-12-07 10:24:00 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 增加流量合并功能
+	2. 搭建流量查询架构
+[Treatment]
+	* [A]engine_code/storage/flow_proc/include/flowdb2.h
+	* [A]engine_code/storage/flow_proc/include/flowerr.h
+	* [A]engine_code/storage/flow_proc/include/flowrec.h
+	* [A]engine_code/storage/flow_proc/include/flowstat.h
+	* [A]engine_code/storage/flow_proc/src/flow_make.c
+	* [M]engine_code/storage/flow_proc/include/flow_config.h
+	* [M]engine_code/storage/flow_proc/include/flow_debug.h
+	* [M]engine_code/storage/flow_proc/include/gms_flow.h
+	* [M]engine_code/storage/flow_proc/src/flow_store.c
+	* [M]engine_code/storage/flow_proc/src/flow_cfg.c
+	* [M]engine_code/storage/flow_proc/src/flow_main.c
+	* [M]engine_code/storage/flow_proc/conf/flow_time.cfg
+	* [M]engine_code/storage/flow_proc/Makefile.am
+
+2013-12-05 9:00:00 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 添加流量存储架构 
+[Treatment]
+	* [A]engine_code/storage/flow_proc/include/flow_config.h
+	* [A]engine_code/storage/flow_proc/include/gms_flow.h
+	* [A]engine_code/storage/flow_proc/include/flow_debug.h
+	* [A]engine_code/storage/flow_proc/conf/flow_time.cfg
+	* [A]engine_code/storage/flow_proc/conf/flow_trace.cfg
+	* [A]engine_code/storage/flow_proc/src/flow_store.c
+	* [A]engine_code/storage/flow_proc/src/flow_cfg.c
+	* [A]engine_code/storage/flow_proc/src/flow_main.c
+	* [A]engine_code/storage/flow_proc/rebuild.sh
+	* [A]engine_code/storage/flow_proc/Makefile.am
+	* [A]engine_code/storage/flow_proc/configure.in
+	   
+2013-11-30 14:30:30 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 完成 特征事件合并流程 
+	2. 完成 流量合并架构
+[Treatment]
+	* [A]engine_code/storage/merge_proc/include/merge_config.h
+	* [A]engine_code/storage/merge_proc/include/merge_debug.h
+	* [A]engine_code/storage/merge_proc/include/gms_merge.h
+	* [A]engine_code/storage/merge_proc/conf/merge_time.cfg
+	* [A]engine_code/storage/merge_proc/conf/merge_trace.cfg
+	* [A]engine_code/storage/merge_proc/src/merge_cfg.c
+	* [M]engine_code/storage/store_proc/src/merge_main.c
+	* [A]engine_code/storage/merge_proc/src/merge_attack.c
+	* [A]engine_code/storage/merge_proc/src/merge_flow.c
+	* [A]engine_code/storage/merge_proc/src/merge_time_op.c
+	* [M]engine_code/storage/merge_proc/Makefile.am
+
+2013-11-30 14:20:30 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 完成黑名单 DNS URL Psql存储 和redis存储
+[Treatment]
+	* [A]engine_code/storage/store_proc/src/store_black.c
+	* [M]engine_code/storage/store_proc/include/gms_store.h
+	* [M]engine_code/storage/store_proc/include/store_file_op.h
+	* [M]engine_code/storage/store_proc/include/store_config.h
+	* [M]engine_code/storage/store_proc/include/store_debug.h
+	* [M]engine_code/storage/store_proc/conf/storage.cfg
+	* [M]engine_code/storage/store_proc/src/store_main.c
+	* [M]engine_code/storage/store_proc/src/store_av.c
+	* [M]engine_code/storage/store_proc/src/store_attack.c
+	* [M]engine_code/storage/store_proc/src/store_3rd.c
+	* [M]engine_code/storage/store_proc/src/store_black.c
+	* [M]engine_code/storage/store_proc/src/store_file_op.c
+	* [M]engine_code/storage/store_proc/src/store_cfg.c
+	* [M]engine_code/storage/store_proc/Makefie.am
+
+2013-11-19 18:20:30 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 删除按引擎划分线程机制，修改为按表划分
+	2. 构建各事件存储postgres数据库，并初步实现attack 和 3rd事件入库
+[Treatment]
+	* [A]engine_code/storage/store_proc/src/store_file_op.c
+	* [A]engine_code/storage/store_proc/src/store_cfg.c
+	* [A]engine_code/storage/store_proc/include/store_file_op.h
+	* [A]engine_code/storage/store_proc/include/gms_store.h
+	* [A]engine_code/storage/store_proc/conf/storage.cfg
+	* [M]engine_code/storage/store_proc/include/dirwalk.h
+	* [M]engine_code/storage/store_proc/include/gms_store.h
+	* [M]engine_code/storage/store_proc/src/store_main.c
+	* [M]engine_code/storage/store_proc/src/store_dirwalk.c
+	* [M]engine_code/storage/store_proc/src/store_av.c
+	* [M]engine_code/storage/store_proc/Makefie.am
+	* [D]engine_code/storage/store_proc/conf/store.cfg
+
+2013-11-15 14:07:30 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 删除按引擎划分线程机制，修改为按表划分
+	2. 构建各事件存储postgres数据库，并初步实现attack 和 3rd事件入库
+[Treatment]
+	* [A]engine_code/storage/store_proc/src/store_abb.c
+	* [A]engine_code/storage/store_proc/src/store_attack.c
+	* [A]engine_code/storage/store_proc/src/store_3rd.c
+	* [A]engine_code/storage/store_proc/src/store_av.c
+	* [D]engine_code/storage/store_proc/src/store_dt.c
+	* [D]engine_code/storage/store_proc/src/store_mtx.c
+	* [D]engine_code/storage/store_proc/src/store_vds.c
+	* [M]engine_code/storage/store_proc/include/dirwalk.h
+	* [M]engine_code/storage/store_proc/include/gms_store.h
+	* [M]engine_code/storage/store_proc/include/store_debug.h
+	* [M]engine_code/storage/store_proc/conf/store.cfg
+	* [M]engine_code/storage/store_proc/src/store_main.c
+	* [M]engine_code/storage/store_proc/src/store_dirwalk.c
+	* [M]engine_code/storage/store_proc/Makefie.am
+
+2013-11-11 18:23:30 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 添加存储子模块debug调试机制
+[Treatment]
+	* [M]engine_code/storage/store_proc/src/store_mtx.c
+	* [M]engine_code/storage/store_proc/src/store_vds.c
+	* [M]engine_code/storage/store_proc/src/store_dt.c
+	* [M]engine_code/storage/store_proc/src/store_main.c
+	* [M]engine_code/storage/store_proc/Makefie.am
+	* [M]engine_code/storage/store_proc/include/gms_store.h
+	* [A]engine_code/storage/store_proc/include/store_debug.h
+	* [A]engine_code/storage/store_proc/conf/store_trace.cfg
+	* [M]engine_code/storage/store_proc/conf/store.cfg
+
+2013-11-08 17:43:30 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 添加遍历目录
+	2. 添加配置文件读取
+[Treatment]
+	* [RA]engine_code/storage/store_proc/conf
+	* [A]engine_code/storage/store_proc/include/dirwalk.h
+	* [A]engine_code/storage/store_proc/src/store_dirwalk.c
+	* [M]engine_code/storage/store_proc/src/store_mtx.c
+	* [M]engine_code/storage/store_proc/src/store_vds.c
+	* [M]engine_code/storage/store_proc/src/store_dt.c
+	* [M]engine_code/storage/store_proc/Makefie.am
+	* [M]engine_code/storage/store_proc/include/gms_store.h
+
+
+2013-11-06 17:40:30 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 添加存储合并流程系统代码架构
+[Treatment]
+	* [RA]engine_code/storage/merge_proc
+	* [RA]engine_code/storage/merge_proc/include
+	* [RA]engine_code/storage/merge_proc/src
+	* [A]engine_code/storage/merge_proc/configure.in
+	* [A]engine_code/storage/merge_proc/Makefie.am
+	* [A]engine_code/storage/merge_proc/rebuild.sh
+	* [A]engine_code/storage/merge_proc/src/merge_main.c
+
+2013-11-06 17:28:30 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 添加存储流程系统基本架构
+	2. 构建存储多线程机制
+[Treatment]
+	* [RA]engine_code/storage/store_proc
+	* [RA]engine_code/storage/store_proc/include
+	* [RA]engine_code/storage/store_proc/src
+	* [A]engine_code/storage/store_proc/configure.in
+	* [A]engine_code/storage/store_proc/Makefie.am
+	* [A]engine_code/storage/store_proc/rebuild.sh
+	* [A]engine_code/storage/store_proc/src/store_main.c
+	* [A]engine_code/storage/store_proc/src/store_mtx.c
+	* [A]engine_code/storage/store_proc/src/store_vds.c
+	* [A]engine_code/storage/store_proc/src/store_dt.c
+
+2013-11-06 17:25:30 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 添加应用redis基本接口例子
+[Treatment]
+	* [RA]engine_code/storage/redis_test
+	* [RA]engine_code/storage/redis_test/include
+	* [RA]engine_code/storage/redis_test/src
+	* [A]engine_code/storage/redis_test/configure.in
+	* [A]engine_code/storage/redis_test/Makefie.am
+	* [A]engine_code/storage/redis_test/rebuild.sh
+	* [A]engine_code/storage/redis_test/src/test_redis_main.c
+
+2013-10-31 18:22:30 liudanbing <liudanbing@chanct.com>
+[Cause]
+	1. 搭建存储应用代码架构
+	2. 添加应用PostgreSQL基本接口例子
+[Treatment]
+	* [A]engine_code/storage/build.sh
+	* [RA]engine_code/storage/psql_test
+	* [RA]engine_code/storage/psql_test/include
+	* [RA]engine_code/storage/psql_test/src
+	* [A]engine_code/storage/psql_test/configure.in
+	* [A]engine_code/storage/psql_test/Makefie.am
+	* [A]engine_code/storage/psql_test/rebuild.sh
+	* [A]engine_code/storage/psql_test/include/test_helper.c
+	* [A]engine_code/storage/psql_test/src/test_db_helper.c
+	* [A]engine_code/storage/psql_test/src/test_main.c
+
+
+
+2013-10-31 17:42:30 liudanbing <liudanbing@chanct.com>
+[Cause]
+	创建ChangeLog.store文件
+[Treatment]
+	* [A]engine_code/storage/ChangeLog.store
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmsdeploy>
+    <function id="F01" deploy="0" desc="流量分析"/> 
+    <function id="F02" deploy="0" desc="流量还原配置"/> 
+    <function id="F03" deploy="1" desc="调试信息导出"/> 
+    <function id="F04" deploy="1" desc="上网行为审计"/>   
+    <function id="WZ"    deploy="1" desc="万兆支持: 包括捕包设置，授权"/>     
+    <function id="HELP" deploy="1" desc="帮助"/> 
+</gmsdeploy>

@@ -1,0 +1,5 @@
+{
+	"gmsconfig"       : "/gms/conf/gmsconfig.xml",
+	"shellcmd"        : "/gms/gapi/modules/device/conf/sws240_set.sh"
+
+}
