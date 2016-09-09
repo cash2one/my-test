@@ -5,6 +5,7 @@ import httplib,urllib,urllib2
 import json,os,time,traceback
 import comm_data
 from  js_log import record_log_init
+import ConfigParser
 
 '''
 You can also use the following if you are using json.
@@ -30,12 +31,6 @@ def Reg_from_server(host,url,username, LUID):
         if httpClient:
             httpClient.close()    
 
-#def format(host,url,username,LUID):
-#    res_status,res_data = Reg_from_server(host,url,username,LUID)
-#    data = json.loads(res_data)
-#    data_1 = data["ClientUID"]
-#    return data_1 
-
 def dump2reg(dicts):
     if not dicts.get('ClientUID'):
         print 'Recv ClientUID is Null.'
@@ -44,19 +39,36 @@ def dump2reg(dicts):
         fp.writelines(dicts.get("ClientUID"))
     fp.close()
 
-def detectData():
+g_dict = {}
+def init_conf():
     global logger
+    global g_dict
+
     logger = record_log_init()
+
+    configHandler = ConfigParser.ConfigParser()
+    configHandler.read(os.path.join(os.path.dirname(os.path.abspath(__file__)),'js.conf'))
+    g_dict['url'] = configHandler.get('g_js','url') 
+    g_dict['host'] = configHandler.get('g_js','host') 
+    g_dict['luid'] = configHandler.get('g_js','LUID') 
+    g_dict['username'] = configHandler.get('g_js','username') 
+    g_dict['regfile'] = configHandler.get('reg','regfile') 
+
+def detectData():
     try:
-        url  = 'https://o1.t1.xiseg.com/api/o1/register'
-        LUID = '1903338b-7557-4d83-9920-12eb9120d369'
-        host = "o1.t1.xiseg.com"
-        username = "test"
-        path = '/gms/conf/'
+        init_conf()
+    except ConfigParser.NoOptionError:
+        logger.error('%s' %traceback.format_exec())
+    try:
+        url  = g_dict['url']
+        LUID = g_dict['luid'] 
+        host = g_dict['host'] 
+        username = g_dict['username'] 
+        regfile = g_dict['regfile'] 
         logFormat = {"ComUID":LUID,"ClientUID":"","log":[]}
         event_type = {u'木马': '1',u'僵尸网络': '1',u'网站': '2',u'攻击': '3',u'移动互联网恶意代码': '4'}
     
-        if not os.path.isfile(path + 'js.reg'):
+        if not os.path.isfile(regfile):
             rstatus,contents = Reg_from_server(host,url,username,LUID)
             if rstatus != 200:
                 print 'No connection to hosts .'
@@ -66,7 +78,7 @@ def detectData():
             dump2reg(content) 
             logFormat["ClientUID"] = content["ClientUID"]
         else:
-            with open(path + "js.reg","rb") as fp:
+            with open(regfile,"rb") as fp:
                 datas = fp.readlines()
                 logFormat["ClientUID"] = datas[0]
         #print logFormat
@@ -109,14 +121,14 @@ def detectData():
                 logFormat["log"] = log_list
             SendLOG(logFormat,js_file)
     except:
-        print traceback.print_exc()
+        logger.error(traceback.print_exc())
 
 def SendLOG(logFormat,filename):
     port = 443
     interval = 30
     method = 'POST'
-    url ='https://o1.t1.xiseg.com/api/o1/ntl'
-    host = "o1.t1.xiseg.com"
+    url = g_dict['url']
+    host = g_dict['host']
     httpsClient = None
     try:
         params = json.dumps(logFormat)
@@ -130,6 +142,7 @@ def SendLOG(logFormat,filename):
             raise 'Send log fail,please check server .'
         else:
             print response.status
+            logger.error('Response status not 200,remove file.')
             os.remove(filename)
     except Exception, e:
         logger.error('%s' %traceback.format_exec())
@@ -138,16 +151,7 @@ def SendLOG(logFormat,filename):
         if httpsClient:
             httpsClient.close()
                  
-#def transform():
-#    filename = '/home/linux/Templates/20151204143041.817382_R6KR-B42C-HHVW.ok'
-#    with open(filename,'rb') as fp:
-#        datas = fp.readlines()
-#        print type(datas),len(datas),type(datas[0])
-#        datas = json.loads(datas[0])
-#    print datas
 def main():
-    #Reg2server()
-    #transform()
     detectData()
 
 if __name__ == "__main__":
