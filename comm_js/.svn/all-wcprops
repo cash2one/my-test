@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/GMS/!svn/ver/9276/trunk/engine_code/comm
+END
+comm_reg.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/GMS/!svn/ver/9270/trunk/engine_code/comm/comm_reg.py
+END
+comm_file_flock.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/GMS/!svn/ver/9213/trunk/engine_code/comm/comm_file_flock.py
+END
+comm_auth.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/GMS/!svn/ver/9220/trunk/engine_code/comm/comm_auth.py
+END
+file_up_down_tran.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/GMS/!svn/ver/9234/trunk/engine_code/comm/file_up_down_tran.py
+END
+comm_init.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/GMS/!svn/ver/9043/trunk/engine_code/comm/comm_init.py
+END
+comm_main.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/GMS/!svn/ver/9270/trunk/engine_code/comm/comm_main.py
+END
+comm_cmd_proc.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/GMS/!svn/ver/9013/trunk/engine_code/comm/comm_cmd_proc.py
+END
+comm_socket.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/GMS/!svn/ver/9235/trunk/engine_code/comm/comm_socket.py
+END
+comm_data.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/GMS/!svn/ver/9276/trunk/engine_code/comm/comm_data.py
+END
+comm_localdev.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/GMS/!svn/ver/9270/trunk/engine_code/comm/comm_localdev.py
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/GMS/!svn/ver/7920/trunk/engine_code/comm/Makefile
+END

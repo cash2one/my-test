@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/GMS/!svn/ver/9259/trunk/engine_code/comm/conf
+END
+comm_interface_conf.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/GMS/!svn/ver/6737/trunk/engine_code/comm/conf/comm_interface_conf.xml
+END
+alarm_email.txt
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/GMS/!svn/ver/9094/trunk/engine_code/comm/conf/alarm_email.txt
+END
+sys_email.txt
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/GMS/!svn/ver/8109/trunk/engine_code/comm/conf/sys_email.txt
+END
+mtx_email.txt
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/GMS/!svn/ver/8466/trunk/engine_code/comm/conf/mtx_email.txt
+END
+comm_pre_conf.json
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/GMS/!svn/ver/9259/trunk/engine_code/comm/conf/comm_pre_conf.json
+END
